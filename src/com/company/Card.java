@@ -6,7 +6,7 @@ public class Card {
     String rank;
     int value;
 
-    public Card(String suit, String rank, int value) {
+    public Card(String suit, String Rank, int value) {
         this.suit = suit;
         this.rank = rank;
         this.value = value;
@@ -35,8 +35,10 @@ public class Card {
     public void setValue(int value) {
         this.value = value;
     }
-    public Card() {
-        System.out.println(rank + " of " + suit + " value of " + value);
+
+    public void describeCard() {
+        System.out.println(rank + " of " + suit + ": value of " + value);
+
     }
 
 }
