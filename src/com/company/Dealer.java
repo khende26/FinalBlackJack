@@ -111,24 +111,24 @@ public class Dealer {
                                         play = input.nextInt();
                                     }
                                 } else if (play == 2) {
-                                    System.out.println("move to dealer play");
+                                    dealerDraw();
                                 }
 
                             } else if (play == 2) {
-                                System.out.println("move to dealer play");
+                                dealerDraw();
                             }
                         } else if (play == 2) {
-                            System.out.println("move to dealer play");
+                            dealerDraw();
                         }
                     }
                 } else if (play == 2) {
-                    System.out.println("move to dealer play");
+                    dealerDraw();
                 }
             } else {
-                System.out.println("move to dealer play");
+                dealerDraw();
             }
         } else {
-            System.out.println("move to dealer play");
+            dealerDraw();
         }
     }
 
@@ -140,42 +140,42 @@ public class Dealer {
         if (dealerHand == 21) {
             System.out.println("Dealer has BlackJack, you lose");
         }
-        if (dealerHand > 21) {
+            else if (dealerHand > 21) {
             System.out.println("Dealer Busts, YOu Win");
         }
-        if (dealerHand > 17) {
-            System.out.println("Dealer Stays");}
-        if (dealerHand == playerHand) {
+            else if (dealerHand > 17) {
+            System.out.println("Dealer Stays");
+            if (dealerHand == playerHand) {
                 System.out.println("Player total " + playerHand +
-                        " Dealer total " + dealerHand + " Push - no winner");
+                        " Dealer total " + dealerHand + " Push - no winner");}
             }
 
 
-        if (dealerHand < 16) {
+            else if (dealerHand < 16) {
             dealer.add(playingCards.get(0));
             playingCards.remove(0);
             dealer.get(2).describeCard();
             dealerHand = dealerHand + dealer.get(2).getValue();
-            if (dealerHand == 21) {
+                if (dealerHand == 21) {
                 System.out.println("Dealer has BlackJack, you lose");
             }
-            if (dealerHand > 21) {
+                else if (dealerHand > 21) {
                 System.out.println("Dealer Busts, YOu Win");
             }
-            if (dealerHand > 17) {
+                else if (dealerHand > 17) {
                 System.out.println("Dealer must stay");
                 if (dealerHand == playerHand) {
                     System.out.println("Player total " + playerHand +
                             " Dealer total " + dealerHand + " Push - no winner");
                 }
-                if (dealerHand < playerHand) {
+                else if (dealerHand < playerHand) {
                     System.out.println("Player total " + playerHand + "You Win");
                 }
-                if (dealerHand > playerHand) {
+                else if (dealerHand > playerHand) {
                     System.out.println("Player total " + playerHand + "You Lose");
                 }
             }
-            if (dealerHand < 16) {
+                else if (dealerHand < 16) {
                 dealer.add(playingCards.get(0));
                 playingCards.remove(0);
                 dealer.get(3).describeCard();
@@ -183,23 +183,23 @@ public class Dealer {
                 if (dealerHand == 21) {
                     System.out.println("Dealer has BlackJack, you lose");
                 }
-                if (dealerHand > 21) {
+                else if (dealerHand > 21) {
                     System.out.println("Dealer Busts, YOu Win");
                 }
-                if (dealerHand > 17) {
+                else if (dealerHand > 17) {
                     System.out.println("Dealer must stay");
                     if (dealerHand == playerHand) {
                         System.out.println("Player total " + playerHand +
                                 " Dealer total " + dealerHand + " Push - no winner");
                     }
-                    if (dealerHand < playerHand) {
+                    else if (dealerHand < playerHand) {
                         System.out.println("Player total " + playerHand + "You Win");
                     }
-                    if (dealerHand > playerHand) {
+                    else if (dealerHand > playerHand) {
                         System.out.println("Player total " + playerHand + "You Lose");
                     }
                 }
-                if (dealerHand < 16) {
+                else if (dealerHand < 16) {
                     dealer.add(playingCards.get(0));
                     playingCards.remove(0);
                     dealer.get(4).describeCard();
@@ -207,44 +207,44 @@ public class Dealer {
                     if (dealerHand == 21) {
                         System.out.println("Dealer has BlackJack, you lose");
                     }
-                    if (dealerHand > 21) {
+                     else if (dealerHand > 21) {
                         System.out.println("Dealer Busts, YOu Win");
                     }
-                    if (dealerHand > 17) {
+                    else if (dealerHand > 17) {
                         System.out.println("Dealer must stay");
                         if (dealerHand == playerHand) {
                             System.out.println("Player total " + playerHand +
                                     " Dealer total " + dealerHand + " Push - no winner");
                         }
-                        if (dealerHand < playerHand) {
+                        else if (dealerHand < playerHand) {
                             System.out.println("Player total " + playerHand + "You Win");
                         }
-                        if (dealerHand > playerHand) {
+                        else if (dealerHand > playerHand) {
                             System.out.println("Player total " + playerHand + "You Lose");
                         }
                     }
-                    if (dealerHand < 16) {
+                    else if (dealerHand < 16) {
                         dealer.add(playingCards.get(0));
                         playingCards.remove(0);
                         dealer.get(5).describeCard();
                         dealerHand = dealerHand + dealer.get(5).getValue();
                         if (dealerHand == 21) {
-                            System.out.println("Dealer has BlackJack, you lose");
+                            System.out.println("Dealer total" + dealerHand+ " Dealer has BlackJack, you lose");
                         }
-                        if (dealerHand > 21) {
-                            System.out.println("Dealer Busts, YOu Win");
+                        else if (dealerHand > 21) {
+                            System.out.println("Dealer total" + dealerHand + "Dealer Busts, You Win");
                         }
-                        if (dealerHand > 21) {
+                        else if (dealerHand > 21) {
                             System.out.println("Dealer must stay");
                             if (dealerHand == playerHand) {
                                 System.out.println("Player total " + playerHand +
                                         " Dealer total " + dealerHand + " Push - no winner");
                             }
-                            if (dealerHand < playerHand) {
-                                System.out.println("Player total " + playerHand + "You Win");
+                            else if (dealerHand < playerHand) {
+                                System.out.println("Dealer total" + dealerHand+ "Player total " + playerHand + "You Win");
                             }
-                            if (dealerHand > playerHand) {
-                                System.out.println("Player total " + playerHand + "You Lose");
+                            else if (dealerHand > playerHand) {
+                                System.out.println("Dealer total" + dealerHand+ "Player total " + playerHand + "You Lose");
                             }
                         }
                     }
